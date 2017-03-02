@@ -15,17 +15,17 @@ class Hand
 
     @cards.each do |card|
 
-      if card.rank == Fixnum
+      if card.rank.class == Fixnum
         @score += card.rank.to_i
-        binding.pry
+        # binding.pry
       elsif card.face_card?
         @score += 10
-        binding.pry
+        # binding.pry
       elsif card.ace? && score <= 10
         @score += 11
       elsif card.ace? && score > 10
         @score += 1
-        binding.pry
+        # binding.pry
       end
     end
 
